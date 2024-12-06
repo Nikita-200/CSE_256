@@ -3,10 +3,12 @@ code in the function preprocess_mosei(data_path, save_dir, seq_len=50) in the fi
 
 2. This task of preprocessing takes almost 2-3 days in a computer. Due to this constraint, I have
 utilized a dataset that  contains this preprocessed data in the folder 'final_aligned'. This dataset
-contains preprocessed data (visual, textual, acoustic, labels) that is aligned and imputed.
+contains preprocessed data (visual, textual, acoustic, labels) that is aligned and imputed. This 
+dataset is obtained from ACL Challenge website and the files can be downloaded in the form of
+.csd extensions. (approx 9.5GB)
 
 3. We then split this dataset from the 'final_aligned' folder into train and test sets. This data is
-then stored in 'processed_data' folder as npy files. 
+then stored in 'processed_data' folder as npy files. Code in preprocess_new.py.
 
 4. The Graph Memory Fusion Network is defined in gmf_model.py with a few built-in lstm modesl layers.
 5. The Dynamic Fusion Graph is defined in dfg.py file.
