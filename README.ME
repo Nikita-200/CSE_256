@@ -1,0 +1,21 @@
+1. Initially, we need to preprocess the CMU-MOSEI dataset. For this, we use the commented out
+code in the function preprocess_mosei(data_path, save_dir, seq_len=50) in the file preprocess_new.py.
+
+2. This task of preprocessing takes almost 2-3 days in a computer. Due to this constraint, I have
+utilized a dataset that  contains this preprocessed data in the folder 'final_aligned'. This dataset
+contains preprocessed data (visual, textual, acoustic, labels) that is aligned and imputed.
+
+3. We then split this dataset from the 'final_aligned' folder into train and test sets. This data is
+then stored in 'processed_data' folder as npy files. 
+
+4. The Graph Memory Fusion Network is defined in gmf_model.py with a few built-in lstm modesl layers.
+5. The Dynamic Fusion Graph is defined in dfg.py file.
+
+6. The main.py file then loads the training set and test set and the model runs predictions on these.
+   The accuracy is determined by rounding values of the labels and predictions since the labels are 
+   continuous values.
+
+7. Baselines have been implemented in feedforward_baseline.py and visionlanguage_baseline.py. 
+8. Distilbert pretrained model has been used to test on the test set. This is implemented in 
+   distilbert_emotion_baseline.py and distilbert_sentiment_baseline.py.
+
